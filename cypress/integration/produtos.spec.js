@@ -15,7 +15,7 @@ context('Funcionalidade página de produtos', () => {
             .click()
     });
     //Teste usando variável quantidade
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
 
         var quantidade = 5
 
@@ -37,5 +37,17 @@ context('Funcionalidade página de produtos', () => {
             .should('contain' , quantidade + ' × “Ariel Roll Sleeve Sweatshirt” foram adicionados no seu carrinho.')
     });
 
+
+
+    //Usando comandos customizados
+    it('Deve adicionar produtos ao carrinho usando comando customizado', () => {
+        cy.addProduto('Abominable Hoodie', 'M', 'Green', 2)
+        
+    });
+
+    it.only('Deve adicionar produtos ao carrinho usando comando customizado', () => {
+        cy.addProduto('Ariel Roll Sleeve Sweatshirt', 'XS', 'Red', 4)
+        
+    });
 
 });
