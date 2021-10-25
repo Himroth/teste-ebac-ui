@@ -3,7 +3,7 @@
 context('Funcionalidade página de produtos', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos')
     });
     //Pegando elementos de uma lista em uma classe
     it('Deve selecionar um produto da lista', () => {
