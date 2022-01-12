@@ -1,5 +1,5 @@
 class EnderecoPage {
-
+//Classe com metódo contendo todos os comandos de testes e os parâmetros necessarios para o teste
     editarEnderecoFaturamento(nome, sobrenome, empresa, pais, endereco, numero, cidade, estado, cep, telefone, email ) {
         cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a').click()    
         cy.get(':nth-child(1) > .title > .edit').click()
