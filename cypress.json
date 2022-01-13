@@ -1,6 +1,7 @@
 {
-    "viewportWidth": 1600,
-    "viewportHeight": 1000,
-    "chromeWebSecurity": false,
-    "baseUrl":"http://lojaebac.ebaconline.art.br/"
+  "viewportWidth": 1600,
+  "viewportHeight": 1000,
+  "chromeWebSecurity": false,
+  "baseUrl": "http://lojaebac.ebaconline.art.br/",
+  "projectId": "8zb7j6"
 }
