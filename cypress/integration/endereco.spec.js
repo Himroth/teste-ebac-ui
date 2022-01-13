@@ -25,17 +25,32 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
     //Usando arquivo de dados, passando a lista criada com os dados na fixture, chamando o dadosEndereco e passando o número da lista
     it('Deve fazer cadastro de faturamento com sucesso - USANDO ARQUIVO DE DADOS', () => {
         EnderecoPage.editarEnderecoFaturamento(dadosEndereco[1].nome,
-                                               dadosEndereco[1].sobrenome,
-                                               dadosEndereco[1].empresa,
-                                               dadosEndereco[1].pais,
-                                               dadosEndereco[1].endereco,
-                                               dadosEndereco[1].numero,
-                                               dadosEndereco[1].cidade,
-                                               dadosEndereco[1].estado,
-                                               dadosEndereco[1].cep,
-                                               dadosEndereco[1].telefone,
-                                               dadosEndereco[1].email                        
-            )
+            dadosEndereco[1].sobrenome,
+            dadosEndereco[1].empresa,
+            dadosEndereco[1].pais,
+            dadosEndereco[1].endereco,
+            dadosEndereco[1].numero,
+            dadosEndereco[1].cidade,
+            dadosEndereco[1].estado,
+            dadosEndereco[1].cep,
+            dadosEndereco[1].telefone,
+            dadosEndereco[1].email
+        )
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.')
+    });
+
+    it.only('Deve fazer cadastro de faturamento com sucesso - USANDO ARQUIVO DE DADOS', () => {
+        EnderecoPage.editarEnderecoEntrega(dadosEndereco[2].nome,
+            dadosEndereco[2].sobrenome,
+            dadosEndereco[2].empresa,
+            dadosEndereco[2].pais,
+            dadosEndereco[2].endereco,
+            dadosEndereco[2].numero,
+            dadosEndereco[2].cidade,
+            dadosEndereco[2].estado,
+            dadosEndereco[2].cep
+        )
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso.')
+
     });
 });
